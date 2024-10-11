@@ -5,6 +5,11 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Under Construction');
+    return Center(
+      child: Image.asset(
+        'under_construction.png',
+        fit: BoxFit.cover,
+      ),
+    );
   }
 }
