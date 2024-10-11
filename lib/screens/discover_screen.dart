@@ -13,29 +13,27 @@ class DiscoverScreen extends StatefulWidget {
 }
 
 class _DiscoverScreenState extends State<DiscoverScreen> {
-  String _selectedCategory = ''; // To track the selected category
+  String _selectedCategory = 'Beach';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(230.0), // Mengatur tinggi AppBar
+        preferredSize: const Size.fromHeight(230.0),
         child: AppBar(
           backgroundColor: Theme.of(context).primaryColor,
           flexibleSpace: Stack(
             children: [
               Positioned(
-                left: 20, // Jarak dari kiri
-                top: 30, // Jarak dari atas
+                left: 20,
+                top: 30,
                 child: Container(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 20.0, vertical: 10.0),
                   height: 45.0,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(
-                        40, 255, 255, 255), // Warna background lingkaran
-                    borderRadius: BorderRadius.circular(
-                        30.0), // Membuat background dengan sudut membulat
+                    color: const Color.fromARGB(40, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(30.0),
                   ),
                   child: const Center(
                     child: Text(
@@ -50,15 +48,14 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 ),
               ),
               Positioned(
-                right: 20, // Jarak dari kanan
-                top: 30, // Jarak dari atas
+                right: 20,
+                top: 30,
                 child: Container(
                   width: 45.0,
                   height: 45.0,
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(
-                        40, 255, 255, 255), // Warna background lingkaran
-                    shape: BoxShape.circle, // Bentuk lingkaran
+                    color: Color.fromARGB(40, 255, 255, 255),
+                    shape: BoxShape.circle,
                   ),
                   child: const Icon(
                     Icons.notifications_none_rounded,
@@ -86,19 +83,15 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                     padding: const EdgeInsets.fromLTRB(18, 0, 18, 10),
                     child: Row(
                       children: [
-                        // Search Bar Container
                         Expanded(
                           child: Container(
-                            height: 35.0, // Mengatur tinggi container
-                            // Membuat background bulat untuk seluruh search bar
+                            height: 35.0,
                             decoration: BoxDecoration(
-                              color: Colors.white, // Background color
-                              borderRadius:
-                                  BorderRadius.circular(30.0), // Rounded edges
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(30.0),
                             ),
                             child: Row(
                               children: [
-                                // Ikon di sebelah kiri
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0),
                                   child: Icon(
@@ -106,57 +99,45 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                                     color: Theme.of(context).primaryColor,
                                   ),
                                 ),
-                                // Expanded digunakan untuk membuat TextField fleksibel
                                 const Expanded(
                                   child: TextField(
                                     decoration: InputDecoration(
                                       hintText: "Search",
                                       hintStyle: TextStyle(
                                         color: Colors.grey,
-                                        fontSize: 12.0, // Ukuran teks "Search"
+                                        fontSize: 12.0,
                                       ),
-                                      border: InputBorder
-                                          .none, // Menghilangkan border
+                                      border: InputBorder.none,
                                       contentPadding: EdgeInsets.symmetric(
-                                        vertical:
-                                            17.5, // Mengatur padding vertikal untuk teks di tengah
-                                        horizontal:
-                                            10.0, // Padding horizontal untuk teks
+                                        vertical: 17.5,
+                                        horizontal: 10.0,
                                       ),
                                     ),
                                   ),
                                 ),
                                 Container(
-                                  height: 30.0, // Tinggi tombol lebih kecil
-                                  margin: const EdgeInsets.only(
-                                      right: 2.0), // Margin kanan
+                                  height: 30.0,
+                                  margin: const EdgeInsets.only(right: 2.0),
                                   decoration: BoxDecoration(
-                                    color:
-                                        Colors.blue, // Warna biru untuk tombol
-                                    borderRadius: BorderRadius.circular(
-                                        30.0), // Rounded edges
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(30.0),
                                   ),
                                   child: TextButton(
                                     onPressed: () {
-                                      // Aksi ketika tombol search ditekan
                                       print("Search button pressed");
                                     },
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
-                                        horizontal:
-                                            8.0, // Padding horizontal untuk tombol lebih kecil
-                                        vertical:
-                                            0.0, // Padding vertikal minimum
+                                        horizontal: 8.0,
+                                        vertical: 0.0,
                                       ),
-                                      minimumSize: Size
-                                          .zero, // Menghapus ukuran minimum tombol
+                                      minimumSize: Size.zero,
                                     ),
                                     child: const Text(
                                       "Search",
                                       style: TextStyle(
-                                        color: Colors.white, // Warna teks putih
-                                        fontSize:
-                                            10.0, // Ukuran teks lebih kecil
+                                        color: Colors.white,
+                                        fontSize: 10.0,
                                       ),
                                     ),
                                   ),
@@ -165,27 +146,23 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                            width: 10), // Space between search bar and button
-                        // Icon Button di sebelah kanan search bar
+                        const SizedBox(width: 10),
                         IconButton(
                           icon: Container(
                             width: 35,
                             height: 35,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.white, // Warna background lingkaran
+                              color: Colors.white,
                             ),
-                            padding: const EdgeInsets.all(
-                                2.0), // Padding agar ikon di tengah lingkaran
+                            padding: const EdgeInsets.all(2.0),
                             child: const Icon(
                               Icons.tune_outlined,
                               color: Colors.blue,
-                              size: 20, // Warna ikon
+                              size: 20,
                             ),
                           ),
                           onPressed: () {
-                            // Aksi ketika ikon button ditekan
                             print("Filter button pressed");
                           },
                         ),
@@ -202,7 +179,6 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: <Widget>[
-            // Title: Top Categories
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
               child: Text(
@@ -214,8 +190,6 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 ),
               ),
             ),
-
-            // Horizontal Scroll for Categories
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -239,17 +213,9 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 ],
               ),
             ),
-
-            // Spacer
             const SizedBox(height: 20),
-
-            // Display Cards when a category is selected
             if (_selectedCategory.isNotEmpty) _buildCategoryCards(),
-
-            // Spacer
             const SizedBox(height: 20),
-
-            // Title: Popular Destination
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
               child: Text(
@@ -261,24 +227,21 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 ),
               ),
             ),
-
-            // Other contents here
           ],
         ),
       ),
     );
   }
 
-  // Method to build category buttons with icons
   Widget _buildCategoryButton({required IconData icon, required String label}) {
-    bool isSelected = _selectedCategory == label; // Check if button is selected
+    bool isSelected = _selectedCategory == label;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4.0),
       child: TextButton.icon(
         onPressed: () {
           setState(() {
-            _selectedCategory = label; // Update selected category
+            _selectedCategory = label;
           });
         },
         icon: Icon(icon, color: isSelected ? Colors.white : Colors.blue),
@@ -298,26 +261,25 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
     );
   }
 
-  // Method to build horizontal scrollable cards
   Widget _buildCategoryCards() {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
           _buildCardItem(
-            image: 'assets/beach.jpg', // Replace with your image asset
-            title: 'Beautiful Beach',
-            rating: 5.0,
-            location: 'Bali, Indonesia',
+            image: 'beach_umbrella.jpg',
+            title: 'Pangandaran Beach',
+            rating: 4.8,
+            location: 'Pangandaran, Indonesia',
           ),
           _buildCardItem(
-            image: 'assets/mountain.jpg', // Replace with your image asset
-            title: 'Majestic Mountain',
+            image: 'beach_umbrella.jpg',
+            title: 'Teluk Penyu Beach',
             rating: 4.8,
             location: 'Alps, Switzerland',
           ),
           _buildCardItem(
-            image: 'assets/snow.jpg', // Replace with your image asset
+            image: 'beach_umbrella.jpg',
             title: 'Snowy Peaks',
             rating: 4.9,
             location: 'Himalayas, Nepal',
@@ -327,7 +289,6 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
     );
   }
 
-  // Method to build individual card items
   Widget _buildCardItem({
     required String image,
     required String title,
@@ -345,7 +306,6 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Image
               ClipRRect(
                 borderRadius: BorderRadius.circular(15.0),
                 child: Image.asset(
@@ -355,8 +315,6 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                   fit: BoxFit.cover,
                 ),
               ),
-
-              // Title and Rating
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -384,8 +342,6 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                   ],
                 ),
               ),
-
-              // Location
               Padding(
                 padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
                 child: Row(
