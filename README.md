@@ -15,5 +15,7 @@ Tombol icon settings -> Reset status pengguna sehingga newcomer_screen kembali m
 
 Selengkapnya dapat dilihat dalam project.
 
-![Preview Project](newcomer_screen.png)
-![Preview Project](main_screen.png)
+![Preview Project](/assets/newcomer_screen.png)
+![Preview Project](/assets/main_screen.png)
+
+
