@@ -1,16 +1,19 @@
-# myapp
+# Tugas 2 Flutter Template Slicing 
 
-A new Flutter project.
+Dibuat oleh Riko Gunawan - 2022130016
 
-## Getting Started
+## Link + Screenshot
 
-This project is a starting point for a Flutter application.
+https://dribbble.com/shots/22077585-Gotravel-Travel-Mobile-Apps
 
-A few resources to get you started if this is your first Flutter project:
+**Catatan**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Tidak semua tombol berisi content.
+- Terdapat User Provider.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tombol icon settings -> Reset status pengguna sehingga newcomer_screen kembali muncul
+
+Selengkapnya dapat dilihat dalam project.
+
+![Preview Project](newcomer_screen.png)
+![Preview Project](main_screen.png)
