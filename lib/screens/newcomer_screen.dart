@@ -56,7 +56,7 @@ class NewcomerScreen extends StatelessWidget {
                   context.read<UserProvider>().setOldUser();
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => MainScreen()),
+                    MaterialPageRoute(builder: (context) => const MainScreen()),
                   );
                 },
                 style: ElevatedButton.styleFrom(

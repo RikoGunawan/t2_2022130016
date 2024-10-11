@@ -127,9 +127,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                                     borderRadius: BorderRadius.circular(30.0),
                                   ),
                                   child: TextButton(
-                                    onPressed: () {
-                                      print("Search button pressed");
-                                    },
+                                    onPressed: () {},
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                         horizontal: 8.0,
