@@ -6,4 +6,14 @@ Dibuat oleh Riko Gunawan - 2022130016
 
 https://dribbble.com/shots/22077585-Gotravel-Travel-Mobile-Apps
 
+**Catatan**
 
+- Tidak semua tombol berisi content.
+- Terdapat User Provider.
+
+Tombol icon settings -> Reset status pengguna sehingga newcomer_screen kembali muncul
+
+Selengkapnya dapat dilihat dalam project.
+
+![Preview Project](newcomer_screen.png)
+![Preview Project](main_screen.png)
