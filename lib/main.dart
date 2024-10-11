@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/screens/main_screen.dart';
+import 'package:myapp/providers/user_provider.dart';
+import 'package:myapp/screens/newcomer_screen.dart';
+import 'package:provider/provider.dart';
+import 'screens/main_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) =>
+          UserProvider()..loadUserStatus(), // Muat status pengguna
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Riko',
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 69, 163, 240),
         primaryColorLight: Colors.white,
@@ -22,7 +31,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.interTextTheme(), // Set Inter as default font
       ),
-      home: const MainScreen(),
+      home: Consumer<UserProvider>(
+        builder: (context, userProvider, child) {
+          // Cek apakah pengguna baru atau lama
+          return userProvider.isNewUser
+              ? const NewcomerScreen()
+              : const MainScreen();
+        },
+      ),
     );
   }
 }

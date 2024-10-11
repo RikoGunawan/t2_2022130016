@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/providers/user_provider.dart';
+import 'package:provider/provider.dart';
+
+import 'newcomer_screen.dart';
 
 class DiscoverScreen extends StatefulWidget {
   const DiscoverScreen({
@@ -163,7 +167,13 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                             ),
                           ),
                           onPressed: () {
-                            print("Filter button pressed");
+                            // Reset status pengguna agar dianggap pengguna baru
+                            context.read<UserProvider>().resetUserStatus();
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const NewcomerScreen()),
+                            );
                           },
                         ),
                       ],
